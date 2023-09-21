@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filter',
+  pure: false // this will make the pipe impure
 })
 export class FilterPipe implements PipeTransform {
   transform(value: any, filterString?: string, propsName?: string): any {
